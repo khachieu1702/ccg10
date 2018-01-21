@@ -10,4 +10,4 @@ STACK="cc-docker"
 
 source .\cc1718-group10-openrc-3.sh
 
-openstack stack create -t .\server-landscape-yml $STACK --wait
+openstack stack create -t .\server-landscape.yml $STACK --wait
