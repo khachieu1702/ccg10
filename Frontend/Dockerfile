@@ -15,3 +15,4 @@ VOLUME /etc/nginx
 EXPOSE 80
 
 CMD /etc/nginx/fix-nginx-conf.sh CC_BACKEND_SERVERS
+CMD ["nginx", "-g", "daemon off;"]
