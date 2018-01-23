@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Check parameters
-test $# = 2 || { echo "Need 1 parameter: The keypair name to use for created VMs"; exit 1; }
+test $# = 1 || { echo "Need 1 parameter: The keypair name to use for created VMs"; exit 1; }
 KEY_PAIR="$1"
 STACK="cc-docker"
 
