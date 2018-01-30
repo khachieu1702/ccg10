@@ -39,7 +39,7 @@ TOKEN=$(sudo docker swarm join-token -q worker)
 backend_setup_1="{ sudo docker ps &> /dev/null || sudo service docker restart; }"
 
 # ... then join the docker swarm on the frontend server
-backend_setup_2="sudo docker [[TODO]]"
+backend_setup_2="sudo docker swarm join --token "$TOKEN""
 
 # Connect to the backend servers and make them join the swarm
 for i in $LC_BACKEND_IPS; do ssh $SSHOPTS ubuntu@$i "$backend_setup_1 && $backend_setup_2"; done
